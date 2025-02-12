@@ -3,6 +3,10 @@
   <head>
     <title>My first web page</title>
     <style>
+      ul {
+        list-style-type: none;
+      }
+
       #round-img {
         width: 140px;
         height: 140px;
@@ -14,16 +18,23 @@
       .username {
         font-weight: bold;
       }
+
       video {
-        height: 500px;
+        height: 300px;
+      }
+
+      .metadata {
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
-    <a href="https://www.google.co.uk/" target="_blank">Google</a>
-    <a href="mailto:ammar.waseem96@gmail.com">Email</a>
-    <a href="/company/contact.html">contact us</a>
-    <a href="#section-javascript">JavaScript</a>
+    <ul>
+      <li><a href="https://www.google.co.uk/" target="_blank">Google</a></li>
+      <li><a href="mailto:ammar.waseem96@gmail.com">Email</a></li>
+      <li><a href="/company/contact.html">contact us</a></li>
+    </ul>
+
     <a href="images/ammar.jpg" download>
       <img
         id="round-img"
@@ -34,18 +45,57 @@
 
     <p class="username">@ammarahmedkhan</p>
     <p>i love to teach you HTML!</p>
+
     <br />
     <br />
     <br />
-    <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">
-      <h2>HTML</h2>
-    </a>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
     <video controls autoplay loop src="videos/learn_html.mp4">
       your browser does't support the video
     </video>
-    <audio controls autoplay src="sounds/ringtone_latino.mp3">audio</audio>
+    <p class="metadata">Metadata:</p>
+    <dl>
+      <dt>Filename</dt>
+      <dd>learn_html.mp4</dd>
+      <dt>Duration</dt>
+      <dd>26 seconds</dd>
+      <dt>Dimensions</dt>
+      <dd>3840 * 2160</dd>
+      <dt>Size</dt>
+      <dd>32.7 MB</dd>
+    </dl>
 
+    <br />
+    <br />
+
+    <audio controls src="sounds/ringtone_latino.mp3">audio</audio>
+    <p class="metadata">Metadata:</p>
+    <dl>
+      <dt>Filename</dt>
+      <dd>ringtone_latino.mp3</dd>
+      <dt>Duration</dt>
+      <dd>30 seconds</dd>
+      <dt>Size</dt>
+      <dd>481.1 KB</dd>
+    </dl>
+
+    <br />
+    <br />
+
+    <ol>
+      <li><a href="#section-html">HTML</a></li>
+      <li><a href="#section-css">CSS</a></li>
+      <li><a href="#section-javascript">JavaScript</a></li>
+    </ol>
+
+    <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">
+      <h2 id="section-html">HTML</h2>
+    </a>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium animi
       magnam enim, minima autem eos excepturi distinctio aliquid inventore
@@ -59,7 +109,7 @@
       cum. Id repellendus sapiente consectetur fugit tenetur dicta rem sunt
       minus, quos cum saepe ex illum quas molestias soluta.
     </p>
-    <h2>CSS</h2>
+    <h2 id="section-css">CSS</h2>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium animi
       magnam enim, minima autem eos excepturi distinctio aliquid inventore
