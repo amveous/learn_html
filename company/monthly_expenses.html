@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      tbody,
+      td {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 20px;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .align-left {
+        text-align: left;
+      }
+
+      thead {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">Monthly Expenses</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="4">Grocery</th>
+          <th class="align-left">Item</th>
+          <th class="align-left">Quantity</th>
+          <th class="align-left">Price</th>
+        </tr>
+        <tr>
+          <td>Bread</td>
+          <td>01</td>
+          <td>Rs. 200</td>
+        </tr>
+        <tr>
+          <td>Eggs</td>
+          <td>11</td>
+          <td>Rs. 350</td>
+        </tr>
+        <tr class="bold">
+          <td>Subtotal</td>
+          <td>12</td>
+          <td>Rs. 550</td>
+        </tr>
+
+        <tr>
+          <th rowspan="5">Electronics</th>
+          <th class="align-left">Item</th>
+          <th class="align-left">Quantity</th>
+          <th class="align-left">Price</th>
+        </tr>
+        <tr>
+          <td>Refrigerator</td>
+          <td>01</td>
+          <td>Rs. 40,000</td>
+        </tr>
+        <tr>
+          <td>Sewing Machine</td>
+          <td>01</td>
+          <td>Rs. 15,000</td>
+        </tr>
+        <tr>
+          <td>Fans</td>
+          <td>03</td>
+          <td>Rs. 30,000</td>
+        </tr>
+        <tr>
+          <td>Subtotal</td>
+          <td>05</td>
+          <td>Rs. 85,000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="2">Total</th>
+          <th class="align-left">17</th>
+          <th class="align-left">Rs. 85,550</th>
+        </tr>
+      </tfoot>
+    </table>
+    <a href="/">Go back to home</a>
+  </body>
+</html>
