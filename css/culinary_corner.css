@@ -10,6 +10,13 @@ body a {
   color: #34495e;
 }
 
+body nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header styles */
 header {
   padding-top: 23px;
   padding-bottom: 20px;
@@ -29,13 +36,52 @@ header nav a:hover {
   color: #e67e22;
 }
 
-header nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
 header nav ul li {
   display: inline;
   margin-right: 27.55px;
+}
+
+/* main container styles */
+#main-container {
+  padding-left: 210px;
+  padding-right: 200px;
+  padding-top: 32px;
+  padding-bottom: 50px;
+}
+
+/* aside styles */
+aside {
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  width: 206px;
+  padding-left: 22.5px;
+  padding-right: 20px;
+  padding-top: 13px;
+  padding-bottom: 20px;
+}
+
+aside h2 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 24px;
+}
+
+#section {
+  margin-top: 41px;
+}
+
+aside nav ul li {
+  margin-top: 0px;
+  margin-bottom: 19.5px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+aside nav a:hover {
+  color: #e67e22;
+}
+
+/* Target "Main Dishes" */
+aside nav:first-of-type ul li:nth-child(2) {
+  position: relative;
+  top: -1px;
 }
