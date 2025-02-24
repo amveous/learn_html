@@ -44,7 +44,7 @@ header nav ul li {
 /* main container styles */
 #main-container {
   padding-left: 210px;
-  padding-right: 209px;
+  padding-right: 208px;
   padding-top: 32px;
   padding-bottom: 50px;
   display: flow-root;
@@ -99,6 +99,10 @@ main section {
   overflow: hidden;
 }
 
+main section:not(:last-child) {
+  margin-bottom: 31px;
+}
+
 main figure {
   margin: 0px;
   position: relative;
@@ -122,7 +126,7 @@ main section figcaption {
 }
 
 main section article {
-  padding: 36px 31.5px;
+  padding: 36px 31.5px 32px 31.5px;
 }
 
 main section article h2 {
