@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector Specificity</title>
+    <style>
+      /* If you hover over the selector, you will see the selector specificity as (0,0,0) */
+      /* first 0 represents the weight of id selector */
+      /* second 0 represents the weight of class/attribute selector */
+      /* third 0 represents the weight of element selector */
+
+      /* id has the highest weight in selector specificity (1,0,0) */
+      #products {
+        color: brown;
+      }
+
+      /* class/attribute selector specificity comes after the id (0,1,0) */
+      .highlight {
+        color: deeppink;
+      }
+
+      /* element selector specificity comes after the class/attribute (0,0,1) */
+      h1 {
+        color: dodgerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1 id="products" class="highlight">I should have a brown color!</h1>
+    </article>
+  </body>
+</html>

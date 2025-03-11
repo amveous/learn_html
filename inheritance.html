@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+    <style>
+      p {
+        color: dodgerblue; /* this property will be inherited to its children i.e. strong element by default  */
+        border: 1px solid black; /* this property does not get inherit to its children i.e. strong element by default */
+      }
+
+      strong {
+        color: initial; /* initial will remove the default inheritance from its parent i.e. p */
+        border: inherit; /* inherit will explicitly inherits property from its parent i.e. p */
+      }
+    </style>
+  </head>
+  <body>
+    <p>Lorem ipsum <strong>dolor</strong> sit amet.</p>
+  </body>
+</html>
