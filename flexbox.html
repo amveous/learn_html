@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        border: 1px solid gray;
+        height: 90vh;
+        display: flex; /* this property enables flex & by default sets `flex-direction` to row */
+
+        /* when we apply flex direction to row then the main axis is horizontal and the cross axis is vertical
+        and when we apply flex direction to column the main axis becomes vertical and the cross axis becomes horizontal */
+        justify-content: center; /* to align items on the main axes */
+        align-items: center; /* to align item on the cross axis */
+      }
+
+      .container2 {
+        /* when the content gets bigger and doesn't fit on a single line its size get shrinked,
+        then we use `flex-wrap: wrap;` to wrap the content on to next line while maintaining its orignal size.*/
+        flex-wrap: wrap;
+        /* to align multiple lines of wrapped content as a whole */
+        align-content: center;
+      }
+      .box {
+        height: 5rem;
+        width: 5rem;
+        background-color: gold;
+        margin: 1rem;
+      }
+      .box1 {
+        /* to align single item of a flex container 
+        it only works on flex item and not on flex container*/
+        align-self: flex-start;
+      }
+
+      .container3 .box {
+        /*when direction is row it will appyly on width
+        and when the direcrtion is column it will apply to height  */
+        flex-basis: 10rem;
+      }
+      .container4 .box {
+        /* To allow items to take available empty space 
+        in slice*/
+        flex-grow: 1;
+      }
+
+      .container4 .growmore {
+        /* flex-grow 2; means divide available space into equally slices but one item is taking space of two slice */
+        flex-grow: 2;
+      }
+
+      .container5 .box {
+        flex-basis: 20rem;
+        flex-shrink: 1;
+      }
+      .container5 .shrinkmore {
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Using justify-content & align-items</h2>
+    <div class="container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+
+    <h2>Using flex-wrap & align-content</h2>
+    <div class="container container2">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+      <div class="box">F</div>
+      <div class="box">G</div>
+      <div class="box">H</div>
+      <div class="box">I</div>
+      <div class="box">J</div>
+      <div class="box">K</div>
+      <div class="box">L</div>
+      <div class="box">M</div>
+      <div class="box">N</div>
+      <div class="box">O</div>
+      <div class="box">P</div>
+    </div>
+
+    <h2>Using align-self</h2>
+    <div class="container">
+      <div class="box box1">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+
+    <h2>Using flex-basis</h2>
+    <div class="container container3">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+
+    <h2>Using flex-grow</h2>
+    <div class="container container4">
+      <div class="box growmore">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+
+    <h2>Using flex-shrink</h2>
+    <div class="container container5">
+      <div class="box shrinkmore">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+  </body>
+</html>
