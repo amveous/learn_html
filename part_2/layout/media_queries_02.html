@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      /*
+      We're using Mobile First approach, where we'd define CSS for mobile first
+      and then use media queries to make our design responsive for larger devices
+      */
+      .box {
+        padding: 1rem;
+        font-size: 3rem;
+        background: peachpuff;
+      }
+
+      .tablet,
+      .laptop {
+        display: none;
+      }
+
+      /* For Tablet */
+      @media screen and (min-width: 768px) {
+        .mobile {
+          display: none;
+        }
+
+        .tablet {
+          display: block;
+        }
+      }
+
+      /* For Laptop */
+      @media screen and (min-width: 1024px) {
+        .tablet {
+          display: none;
+        }
+
+        .laptop {
+          display: block;
+        }
+      }
+
+      @media print {
+        .mobile {
+          display: none;
+        }
+
+        .laptop {
+          display: block;
+        }
+
+        .container::before {
+          content: "You're printing the page...";
+          color: dimgrey;
+          font-size: 0.5cm;
+        }
+
+        .box {
+          border: 0.5cm solid peachpuff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box mobile">
+        <p>You're seeing this paragraph on <strong>mobile</strong>.</p>
+      </div>
+      <div class="box tablet">
+        <p>You're seeing this paragraph on <strong>tablet</strong>.</p>
+      </div>
+      <div class="box laptop">
+        <p>You're seeing this paragraph on <strong>laptop</strong>.</p>
+      </div>
+    </div>
+  </body>
+</html>

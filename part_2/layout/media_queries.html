@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .box {
+      background-color: gold;
+      padding: 1rem;
+    }
+
+    .box:nth-of-type(2) {
+      background-color: cornflowerblue;
+    }
+
+    @media screen and (min-width: 600px) {
+      .container {
+        flex-direction: row;
+      }
+      .box {
+        background-color: gray;
+      }
+    }
+    /*
+        @media screen and (min-width: 900px) {
+          .container {
+            flex-direction: row;
+          }
+          .box:nth-of-type(2) {
+            background-color: aqua;
+          } */
+
+    @media print {
+      body {
+        font-size: 12pt;
+      }
+
+      .box {
+        padding: 0.5cm;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="box">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex
+          consequuntur necessitatibus ipsum quibusdam nemo tempore sint at enim,
+          sed deleniti, voluptates possimus facere maiores eligendi praesentium
+          aut ratione expedita ipsa sequi ipsam numquam minima. Accusantium
+          facilis repellat repellendus provident, odit qui iusto itaque
+          doloribus ut enim tenetur, delectus iste fuga, sed sequi natus
+          architecto.
+        </p>
+      </div>
+
+      <div class="box">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque sed
+          eum assumenda officiis voluptates ea a accusamus aut dolorem quos
+          consectetur laborum placeat odio inventore enim doloremque nobis,
+          eligendi et. Esse eos ut tenetur culpa numquam blanditiis voluptatum,
+          cupiditate nisi at id voluptas ipsam eligendi aliquid perferendis hic
+          non iste delectus similique nemo in quae?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
