@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: grid;
+        grid-template-rows: repeat(9, 300px);
+        grid-template-columns: 100%;
+        gap: 1rem;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+
+      @media screen and (min-width: 768px) {
+        .container {
+          grid-template-columns: repeat(2, 50%);
+          grid-template-rows: repeat(5, 300px);
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .container {
+          grid-template-rows: repeat(4, 300px);
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.5rem;
+        }
+        .box2 {
+          grid-column: 2 / span 2;
+          grid-row: 1 / span 2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <img src="../images/dario-jud-9-fWN3MsWss-unsplash.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="../images/dario-jud-CsySFPDCpSQ-unsplash.jpg" alt="" />
+      </div>
+      <div class="box2">
+        <img src="../images/david-underland-p294dPax7JE-unsplash.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="../images/kevin-mueller-yUqTvrvVfrE-unsplash.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="../images/pavlo-talpa-lwbXgFZJTt0-unsplash.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="../images/red-zeppelin-GW6yMuMupws-unsplash.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="../images/royce-fonseca-C5-bRP7A0Uw-unsplash.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="../images/the-chaffins-G44VQNKMdKc-unsplash.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="../images/tobias-reich-ah_36QoNmf0-unsplash.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
